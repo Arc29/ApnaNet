@@ -6,7 +6,192 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/bin/java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/bin/keytool" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/conf/net.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/conf/sdp/sdp.conf.template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/conf/security/java.policy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/conf/security/java.security" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/conf/security/policy/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/conf/security/policy/limited/default_US_export.policy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/conf/security/policy/limited/default_local.policy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/conf/security/policy/limited/exempt_local.policy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/conf/security/policy/unlimited/default_US_export.policy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/conf/security/policy/unlimited/default_local.policy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/conf/sound.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/include/classfile_constants.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/include/jawt.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/include/jni.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/include/jvmti.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/include/jvmticmlr.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/include/linux/jawt_md.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/include/linux/jni_md.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.base/COPYRIGHT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.base/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.base/aes.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.base/asm.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.base/c-libutl.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.base/cldr.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.base/icu.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.base/public_suffix.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.base/unicode.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.datatransfer/COPYRIGHT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.datatransfer/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.desktop/COPYRIGHT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.desktop/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.desktop/colorimaging.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.desktop/giflib.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.desktop/harfbuzz.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.desktop/jpeg.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.desktop/lcms.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.desktop/libpng.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.desktop/mesa3d.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.desktop/opengl.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.desktop/xwd.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.prefs/COPYRIGHT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.prefs/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.xml/COPYRIGHT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.xml/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.xml/bcel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.xml/dom.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.xml/jcup.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.xml/xalan.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/java.xml/xerces.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/jdk.unsupported/COPYRIGHT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/legal/jdk.unsupported/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/classlist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/jexec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/jrt-fs.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/jspawnhelper" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/jvm.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/libawt.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/libawt_headless.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/libawt_xawt.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/libfontmanager.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/libjava.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/libjavajpeg.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/libjawt.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/libjimage.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/libjli.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/libjsig.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/libjsound.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/liblcms.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/libmlib_image.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/libnet.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/libnio.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/libprefs.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/libsplashscreen.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/libverify.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/libzip.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/modules" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/psfont.properties.ja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/psfontj2d.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/security/blacklisted.certs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/security/cacerts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/security/default.policy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/security/public_suffix_list.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/server/Xusage.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/server/libjsig.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/server/libjvm.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/lib/tzdb.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/man/man1/java.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/man/man1/keytool.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx/release" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/bin/java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/bin/keytool" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/conf/net.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/conf/sdp/sdp.conf.template" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/conf/security/java.policy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/conf/security/java.security" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/conf/security/policy/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/conf/security/policy/limited/default_US_export.policy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/conf/security/policy/limited/default_local.policy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/conf/security/policy/limited/exempt_local.policy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/conf/security/policy/unlimited/default_US_export.policy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/conf/security/policy/unlimited/default_local.policy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/conf/sound.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/include/classfile_constants.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/include/jawt.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/include/jni.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/include/jvmti.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/include/jvmticmlr.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/include/linux/jawt_md.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/include/linux/jni_md.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.base/COPYRIGHT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.base/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.base/aes.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.base/asm.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.base/c-libutl.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.base/cldr.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.base/icu.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.base/public_suffix.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.base/unicode.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.datatransfer/COPYRIGHT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.datatransfer/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.desktop/COPYRIGHT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.desktop/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.desktop/colorimaging.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.desktop/giflib.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.desktop/harfbuzz.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.desktop/jpeg.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.desktop/lcms.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.desktop/libpng.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.desktop/mesa3d.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.desktop/opengl.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.desktop/xwd.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.prefs/COPYRIGHT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.prefs/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.xml/COPYRIGHT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.xml/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.xml/bcel.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.xml/dom.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.xml/jcup.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.xml/xalan.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/java.xml/xerces.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/jdk.unsupported/COPYRIGHT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/legal/jdk.unsupported/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/classlist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/jexec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/jrt-fs.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/jspawnhelper" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/jvm.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/libawt.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/libawt_headless.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/libawt_xawt.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/libfontmanager.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/libjava.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/libjavajpeg.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/libjawt.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/libjimage.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/libjli.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/libjsig.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/libjsound.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/liblcms.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/libmlib_image.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/libnet.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/libnio.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/libprefs.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/libsplashscreen.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/libverify.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/libzip.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/modules" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/psfont.properties.ja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/psfontj2d.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/security/blacklisted.certs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/security/cacerts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/security/default.policy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/security/public_suffix_list.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/server/Xusage.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/server/libjsig.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/server/libjvm.so" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/lib/tzdb.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/man/man1/java.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/man/man1/keytool.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hellofx1/release" beforeDir="false" />
+    </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -67,18 +252,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ui/SignInController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="42" column="98" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="98" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/backend/File.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -100,16 +273,21 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ui/FileController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="34" column="79" selection-start-line="34" selection-start-column="79" selection-end-line="34" selection-end-column="79" />
+            <state relative-caret-position="390">
+              <caret line="57" column="20" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -125,7 +303,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/backend/Client.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-540">
-              <caret line="110" column="46" lean-forward="true" selection-start-line="110" selection-start-column="46" selection-end-line="110" selection-end-column="46" />
+              <caret line="110" column="46" selection-start-line="110" selection-start-column="46" selection-end-line="110" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -134,7 +312,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/backend/Server.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
-              <caret line="27" column="48" lean-forward="true" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
+              <caret line="27" column="48" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -155,7 +333,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/backend/ClientHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="645">
-              <caret line="60" column="36" lean-forward="true" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
+              <caret line="60" column="36" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -189,6 +367,9 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -231,6 +412,7 @@
     <option name="width" value="1356" />
     <option name="height" value="742" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
   </component>
@@ -338,6 +520,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
@@ -353,7 +536,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -491,12 +674,12 @@
       <workItem from="1568552803530" duration="8405000" />
       <workItem from="1568626778895" duration="3079000" />
       <workItem from="1568641618436" duration="16124000" />
-      <workItem from="1568695157034" duration="10051000" />
+      <workItem from="1568695157034" duration="10899000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97447000" />
+    <option name="totallyTimeSpent" value="98295000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -508,9 +691,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1032" extended-state="7" />
+    <frame x="0" y="0" width="1920" height="1032" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.25773746" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.25773746" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" />
       <window_info id="Designer" order="3" />
@@ -533,7 +717,7 @@
       <window_info anchor="bottom" id="Messages" order="13" weight="0.3263506" />
       <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="15" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="16" visible="true" weight="0.23484014" />
+      <window_info anchor="bottom" id="Terminal" order="16" visible="true" weight="0.23535912" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -692,14 +876,14 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/backend/Client.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-540">
-          <caret line="110" column="46" lean-forward="true" selection-start-line="110" selection-start-column="46" selection-end-line="110" selection-end-column="46" />
+          <caret line="110" column="46" selection-start-line="110" selection-start-column="46" selection-end-line="110" selection-end-column="46" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/backend/Server.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="27" column="48" lean-forward="true" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
+          <caret line="27" column="48" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -716,7 +900,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/backend/ClientHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
-          <caret line="60" column="36" lean-forward="true" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
+          <caret line="60" column="36" selection-start-line="60" selection-start-column="36" selection-end-line="60" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -732,13 +916,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ui/FileController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="34" column="79" selection-start-line="34" selection-start-column="79" selection-end-line="34" selection-end-column="79" />
+        <state relative-caret-position="390">
+          <caret line="57" column="20" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
