@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.SignInController">
+   <children>
+      <JFXTextField fx:id="emailTxt" focusColor="#c92a2a" layoutX="107.0" layoutY="78.0" prefHeight="25.0" prefWidth="278.0" promptText="Email..">
+         <font>
+            <Font name="Roboto Regular" size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="passwordTxt" focusColor="#c92929" layoutX="107.0" layoutY="163.0" prefHeight="19.0" prefWidth="278.0" promptText="Password..">
+         <font>
+            <Font name="Roboto Regular" size="13.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXCheckBox fx:id="remChk" checkedColor="#fc1a13" layoutX="184.0" layoutY="230.0" text="Remember me" />
+      <JFXButton fx:id="regBtn" layoutX="215.0" layoutY="341.0" onAction="#onReg" text="Register" textFill="BLUE" />
+      <JFXButton fx:id="signinBtn" layoutX="191.0" layoutY="282.0" onAction="#onSignIn" prefHeight="31.0" prefWidth="115.0" style="-fx-background-color: #ff0000; -fx-background-radius: 15;" text="Sign In" textFill="WHITE">
+         <font>
+            <Font name="KacstOne Bold" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
