@@ -59,7 +59,7 @@ public class Peer{
 
         CloseableHttpAsyncClient client = HttpAsyncClients.createDefault();
         client.start();
-        HttpPost request = new HttpPost("http://localhost:3000/register");
+        HttpPost request = new HttpPost("https://apnanet-central.herokuapp.com/register");
         request.setEntity(entity);
         request.setHeader("Content-Type", "application/json; charset=UTF-8");
 
@@ -93,7 +93,7 @@ public class Peer{
 
             CloseableHttpAsyncClient client = HttpAsyncClients.createDefault();
             client.start();
-            HttpDelete request = new HttpDelete("http://localhost:3000/signin/"+Peer.loggedIn.nodeID);
+            HttpDelete request = new HttpDelete("https://apnanet-central.herokuapp.com/signin/"+Peer.loggedIn.nodeID);
             Future<HttpResponse> future = client.execute(request, null);
             return future;
 
@@ -115,7 +115,7 @@ public class Peer{
 
             CloseableHttpAsyncClient client = HttpAsyncClients.createDefault();
             client.start();
-            HttpPost request = new HttpPost("http://localhost:3000/signin");
+            HttpPost request = new HttpPost("https://apnanet-central.herokuapp.com/signin");
             request.setEntity(entity);
             request.setHeader("Content-Type", "application/json; charset=UTF-8");
 

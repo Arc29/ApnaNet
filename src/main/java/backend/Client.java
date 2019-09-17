@@ -112,7 +112,7 @@ public class Client{
         Gson gson=new Gson();
         CloseableHttpAsyncClient client = HttpAsyncClients.createDefault();
         client.start();
-        HttpGet request = new HttpGet("http://localhost:3000/files/"+rootHash);
+        HttpGet request = new HttpGet("https://apnanet-central.herokuapp.com/files/"+rootHash);
         Future<HttpResponse> future = client.execute(request, null);
         String json = EntityUtils.toString(future.get().getEntity(), StandardCharsets.UTF_8);
 

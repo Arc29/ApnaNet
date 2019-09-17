@@ -59,7 +59,7 @@ public class File {
 
         CloseableHttpAsyncClient client = HttpAsyncClients.createDefault();
         client.start();
-        HttpPost request = new HttpPost("http://localhost:3000/files");
+        HttpPost request = new HttpPost("https://apnanet-central.herokuapp.com/files");
         request.setEntity(entity);
         request.setHeader("Content-Type", "application/json; charset=UTF-8");
 
