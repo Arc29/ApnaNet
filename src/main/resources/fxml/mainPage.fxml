@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import com.jfoenix.svg.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.MainPage">
+   <children>
+      <Pane prefHeight="333.0" prefWidth="381.0" style="-fx-background-color: #de871d;">
+         <children>
+            <ImageView fitHeight="344.0" fitWidth="562.0" layoutX="-43.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../drawable/1545972991636.png" />
+               </image>
+            </ImageView>
+            <Pane layoutX="381.0" prefHeight="127.0" prefWidth="1219.0" style="-fx-background-color: #383534;">
+               <children>
+                  <JFXButton fx:id="playBtn" layoutX="98.0" layoutY="12.0" onAction="#play" prefHeight="103.0" prefWidth="98.0" />
+
+                  <JFXButton fx:id="pauseBtn" layoutX="295.0" layoutY="12.0" onAction="#pause" prefHeight="103.0" prefWidth="98.0" />
+                  <JFXButton fx:id="shareBtn" layoutX="1081.0" layoutY="34.0" onAction="#onFileSelect" prefHeight="59.0" prefWidth="109.0" style="-fx-border-color: RED; -fx-border-radius: 15;" text="Share" textFill="#d32525">
+                     <font>
+                        <Font name="Roboto Thin" size="25.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="refreshBtn" layoutX="909.0" layoutY="34.0" onAction="#refresh" prefHeight="59.0" prefWidth="128.0" style="-fx-border-color: BLUE; -fx-border-radius: 15;" text="Refresh" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Thin" size="25.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <JFXScrollPane layoutX="388.0" layoutY="190.0" prefHeight="708.0" prefWidth="1210.0">
+               <children>
+                  <JFXListView fx:id="list2" prefHeight="701.0" prefWidth="1219.0" style="-fx-background-color: black;" verticalGap="2.0" />
+                  <JFXListView fx:id="list1" prefHeight="701.0" prefWidth="1219.0" style="-fx-background-color: black;" verticalGap="2.0" />
+                  <JFXListView fx:id="list3" prefHeight="708.0" prefWidth="825.0" style="-fx-background-color: black;" verticalGap="2.0" />
+               </children>
+            </JFXScrollPane>
+         </children>
+      </Pane>
+      <Pane layoutY="319.0" prefHeight="578.0" prefWidth="381.0" style="-fx-background-color: #383534;">
+         <children>
+            <Label layoutX="76.0" prefHeight="57.0" prefWidth="381.0" text="ApnaNet" textFill="#1973c2">
+               <font>
+                  <Font name="Roboto Thin" size="58.0" />
+               </font>
+            </Label>
+            <Separator layoutX="34.0" layoutY="80.0" prefHeight="0.0" prefWidth="314.0" style="-fx-background-color: #111111;" />
+            <JFXButton fx:id="browseBtn" contentDisplay="RIGHT" layoutX="-6.0" layoutY="83.0" onAction="#but1" prefHeight="81.0" prefWidth="373.0" text="Browse Files" textAlignment="RIGHT" textFill="#1973c2">
+               <font>
+                  <Font name="Roboto Condensed Light" size="32.0" />
+               </font>
+            </JFXButton>
+            <Separator layoutX="34.0" layoutY="161.0" prefHeight="0.0" prefWidth="314.0" style="-fx-background-color: #111111;" />
+            <JFXButton fx:id="dlBtn" contentDisplay="RIGHT" layoutX="-1.0" layoutY="163.0" onAction="#but2" prefHeight="81.0" prefWidth="373.0" text="Downloading" textAlignment="RIGHT" textFill="#1973c2">
+               <font>
+                  <Font name="Roboto Condensed Light" size="32.0" />
+               </font>
+            </JFXButton>
+            <Separator layoutX="34.0" layoutY="243.0" prefHeight="0.0" prefWidth="314.0" style="-fx-background-color: #111111;" />
+            <JFXButton fx:id="fShareBtn" contentDisplay="RIGHT" layoutX="-1.0" layoutY="243.0" onAction="#but3" prefHeight="81.0" prefWidth="373.0" text="View Shared" textAlignment="RIGHT" textFill="#1973c2">
+               <font>
+                  <Font name="Roboto Condensed Light" size="32.0" />
+               </font>
+            </JFXButton>
+            <Separator layoutX="34.0" layoutY="321.0" prefHeight="0.0" prefWidth="314.0" style="-fx-background-color: #111111;" />
+            <JFXButton fx:id="logOutbtn" layoutX="65.0" layoutY="365.0" onAction="#onLogout" prefHeight="59.0" prefWidth="232.0" style="-fx-border-color: RED; -fx-border-radius: 15;" text="Log Out" textFill="#d32525">
+               <font>
+                  <Font name="Roboto Light" size="38.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <JFXTextField fx:id="searchTxt" layoutX="629.0" layoutY="129.0" prefHeight="46.0" prefWidth="723.0" promptText="Search something..." style="-fx-background-color: #c9bfbb; -fx-background-radius: 15;">
+         <font>
+            <Font name="Roboto Light Italic" size="22.0" />
+         </font>
+      </JFXTextField>
+      <Separator layoutX="472.0" layoutY="185.0" prefHeight="3.0" prefWidth="1075.0" />
+   </children>
+</AnchorPane>

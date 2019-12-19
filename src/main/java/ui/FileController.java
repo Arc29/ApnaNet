@@ -65,6 +65,7 @@ public class FileController {
                 dialog.setContentText("Failed");
             }
             dialog.showAndWait();
+
         }
     }
 }

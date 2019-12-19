@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="rootPane" prefHeight="120.0" prefWidth="1219.0" style="-fx-background-color: #383534;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="fname" layoutX="43.0" layoutY="14.0" prefHeight="47.0" prefWidth="216.0" text="File name" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Roboto Regular" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="fsize" layoutX="43.0" layoutY="68.0" prefHeight="38.0" prefWidth="167.0" text="File size" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Roboto Regular" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="fcategory" layoutX="361.0" layoutY="38.0" prefHeight="47.0" prefWidth="207.0" text="Category" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Roboto Regular" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="fcategory1" layoutX="762.0" layoutY="38.0" prefHeight="47.0" prefWidth="207.0" text="Downloaded by:" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Roboto Regular" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="count" layoutX="991.0" layoutY="37.0" prefHeight="47.0" prefWidth="71.0" text="count" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Roboto Regular" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

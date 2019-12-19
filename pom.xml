@@ -48,6 +48,15 @@
             <artifactId>jfoenix</artifactId>
             <version>9.0.9</version>
         </dependency>
+        <dependency>
+            <groupId>common.io</groupId>
+            <artifactId>text</artifactId>
+            <version>1.8</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/commons-text-1.8.jar</systemPath>
+        </dependency>
+
+
 
 
     </dependencies>

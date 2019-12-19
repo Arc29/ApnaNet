@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="rootPane" prefHeight="423.0" prefWidth="395.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.ProxyController">
+   <children>
+      <JFXCheckBox fx:id="manProxy" checkedColor="#e12e13" layoutX="36.0" layoutY="55.0" onAction="#setManProxy" prefHeight="0.0" prefWidth="114.0" text="Manual Proxy" textFill="WHITE" />
+      <JFXTextField fx:id="ipTxt" focusColor="#f21a0f" layoutX="32.0" layoutY="116.0" prefHeight="25.0" prefWidth="237.0" promptText="Proxy IP" styleClass="materialTxt" stylesheets="@../css/styles.css" />
+      <JFXTextField fx:id="portTxt" focusColor="#f21a0f" layoutX="298.0" layoutY="116.0" prefHeight="25.0" prefWidth="71.0" promptText="Port" styleClass="materialTxt" stylesheets="@../css/styles.css" />
+      <JFXCheckBox fx:id="authReq" checkedColor="#e12e13" layoutX="38.0" layoutY="187.0" onAction="#setAuthReq" text="Authentication" textFill="WHITE" />
+      <JFXTextField fx:id="usrTxt" focusColor="#f21a0f" layoutX="99.0" layoutY="230.0" prefHeight="25.0" prefWidth="198.0" promptText="Username" styleClass="materialTxt" stylesheets="@../css/styles.css" />
+      <JFXPasswordField fx:id="passTxt" focusColor="#f21a0f" layoutX="99.0" layoutY="291.0" prefHeight="25.0" prefWidth="198.0" promptText="Password" styleClass="materialTxt" stylesheets="@../css/styles.css" />
+      <JFXButton layoutX="167.0" layoutY="354.0" onAction="#saveProxy" style="-fx-background-color: #f21a0f; -fx-background-radius: 15;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

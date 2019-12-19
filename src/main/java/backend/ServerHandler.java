@@ -22,6 +22,7 @@ public class ServerHandler implements Runnable{
             try {
                 dis = new DataInputStream(sock.getInputStream());
                 dos = new DataOutputStream(sock.getOutputStream());
+                OutputStream os=sock.getOutputStream();
                 while (true) {
                     if (dis.readChar() == 'P') {
                         String rootHash = dis.readUTF();
@@ -47,7 +48,7 @@ public class ServerHandler implements Runnable{
                         byte[] buffer = new byte[8192];
                         int count;
                         while ((count = file.read(buffer)) > 0)
-                            dos.write(buffer, 0, count);
+                            os.write(buffer, 0, count);
 
                     }
                 }

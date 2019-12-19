@@ -11,6 +11,10 @@ public class ActivePeer {
         return ipAddress;
     }
 
+    public String getNodeID() {
+        return nodeID;
+    }
+
     public int getPort() {
         return port;
     }

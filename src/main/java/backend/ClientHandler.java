@@ -1,5 +1,7 @@
 package backend;
 
+import org.apache.http.entity.ContentType;
+
 import java.io.*;
 import java.net.*;
 import java.util.ArrayList;
@@ -34,19 +36,21 @@ public class ClientHandler implements Runnable{
     public void run() {
         if (running) {
             try {
+
                 dos = new DataOutputStream(sock.getOutputStream());
                 dos.writeChar('D');
+
                 dos.writeChars(fileName);
                 dos.writeLong(filePointer[chunk]);
                 dos.close();
                 dis = new DataInputStream(new BufferedInputStream(sock.getInputStream()));
-
+                InputStream is=sock.getInputStream();
                 file = new RandomAccessFile(Client.FILEPATH +"/"+ fileName, "rw");
                 file.seek(filePointer[chunk]);
                 if(dis.readChar()=='D'){
                 byte[] buffer = new byte[8192];
                 int count;
-                while ((count = dis.read(buffer)) > 0) {
+                while ((count = is.read(buffer)) > 0) {
                     file.write(buffer, 0, count);
 
                     if((filePointer[chunk] = file.getFilePointer())==((chunk*256000)+chunkSize)){

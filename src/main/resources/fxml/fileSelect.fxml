@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import com.jfoenix.controls.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
@@ -9,14 +10,16 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="mainPane" prefHeight="410.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.FileController">
+<AnchorPane fx:id="mainPane" prefHeight="410.0" prefWidth="600.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.FileController">
    <children>
-      <TextField fx:id="fchooseTxt" editable="false" layoutX="90.0" layoutY="57.0" prefHeight="26.0" prefWidth="288.0" promptText="Choose File..." />
-      <Button fx:id="fchooseBtn" layoutX="459.0" layoutY="57.0" mnemonicParsing="false" onAction="#fChoose" text="Select File" />
-      <TextField fx:id="nameTxt" layoutX="90.0" layoutY="126.0" prefHeight="26.0" prefWidth="288.0" promptText="Enter name" />
-      <ComboBox fx:id="catBox" layoutX="93.0" layoutY="194.0" prefHeight="26.0" prefWidth="207.0" promptText="Select category.." />
-      <TextField fx:id="tagsTxt" layoutX="90.0" layoutY="264.0" prefHeight="26.0" prefWidth="288.0" promptText="Enter tags (seperate by ;)" />
-      <Button fx:id="shareBtn" layoutX="234.0" layoutY="321.0" mnemonicParsing="false" onAction="#share" text="Share" />
-      <JFXButton layoutX="480.0" layoutY="140.0" text="Hey" />
+      <JFXTextField fx:id="fchooseTxt" editable="false" layoutX="90.0" layoutY="57.0" prefHeight="26.0" prefWidth="288.0" promptText="Choose File..." styleClass="materialTxt" stylesheets="@../css/styles.css" />
+      <JFXButton fx:id="fchooseBtn" layoutX="459.0" layoutY="57.0" mnemonicParsing="false" onAction="#fChoose" style="-fx-border-color: RED; -fx-border-radius: 15;" text="Select File" textFill="WHITE" />
+      <JFXTextField fx:id="nameTxt" layoutX="90.0" layoutY="126.0" prefHeight="26.0" prefWidth="288.0" promptText="Enter name" styleClass="materialTxt" stylesheets="@../css/styles.css" />
+      <JFXComboBox fx:id="catBox" layoutX="93.0" layoutY="194.0" prefHeight="26.0" prefWidth="207.0" promptText="Select category.." />
+      <JFXTextField fx:id="tagsTxt" layoutX="90.0" layoutY="264.0" prefHeight="26.0" prefWidth="288.0" promptText="Enter tags (seperate by ;)" styleClass="materialTxt" stylesheets="@../css/styles.css" />
+      <JFXButton fx:id="shareBtn" layoutX="234.0" layoutY="333.0" mnemonicParsing="false" onAction="#share" style="-fx-background-color: #f21a0f; -fx-background-radius: 15;" text="Share" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font></JFXButton>
    </children>
 </AnchorPane>

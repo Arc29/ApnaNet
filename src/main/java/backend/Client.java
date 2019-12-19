@@ -4,6 +4,8 @@ import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.client.methods.HttpGet;
@@ -12,6 +14,7 @@ import org.apache.http.impl.nio.client.HttpAsyncClients;
 import org.apache.http.util.EntityUtils;
 
 import java.io.*;
+import java.io.File;
 import java.net.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -22,18 +25,21 @@ import java.util.concurrent.Future;
 
 
 public class Client{
-    public static String FILEPATH;
+    public static String FILEPATH="./Downloads";
     public static int threads;
+    private static Client[] files;
     private  ArrayList<TreeMap<String,String>> activepeers;
     private String rootHash,fileName;
     private String[] chunkHashes;
-    private int fileSize,totalChunks;
+    private int totalChunks;
+    private long fileSize;
     private long[] filePointers;
     private ArrayList<Integer> threadsEngaged;
     private final String settingsDir="./settings.json";
     private ThreadGroup threadGroup;
-    public Client(String rootHash,String[] chunkHashes,int fileSize){
+    public Client(String rootHash,String[] chunkHashes,long fileSize,String fileName){
         activepeers=new ArrayList<>();
+        this.fileName=fileName;
         this.rootHash=rootHash;
         this.chunkHashes=chunkHashes.clone();
         this.fileSize=fileSize;
@@ -101,16 +107,86 @@ public class Client{
             FILEPATH = object.get("path").getAsString();
             threads=object.get("threads").getAsInt();
 
-        }catch (IOException e){FILEPATH="./Downloads";threads=3;}
+        }catch (IOException e){FILEPATH="Downloads";threads=3;}
     }
-    public void saveSettings(String path,int thread)throws IOException{
-        BufferedWriter writer=new BufferedWriter(new FileWriter(settingsDir,false));
-        String json="{ \"path\": "+path+", \"threads\": "+thread+" }";
-        writer.write(json);
+    public void saveSettings(String path,int thread){
+        try(BufferedWriter writer=new BufferedWriter(new FileWriter(settingsDir,false))) {
+            String json = "{ \"path\": " + path + ", \"threads\": " + thread + " }";
+            writer.write(json);
+        }catch (IOException e){e.printStackTrace();}
+    }
+    public static void loadFiles() {
+        try {
+            Gson gson = new Gson();
+            String content = Files.readString(Paths.get("files.json"));
+            files = gson.fromJson(content, Client[].class);
+        } catch (Exception e) {
+            files=null;
+        }
+    }
+    public static void saveFiles() {
+        if(files!=null){
+            Gson gson=new Gson();
+            String dir="files.json";
+
+            try(BufferedWriter writer=new BufferedWriter(new FileWriter(dir,false))) {
+                writer.write(gson.toJson(files));
+            }catch (Exception e){e.printStackTrace();}
+        }
+    }
+    public static ObservableList<Client> currentFiles(){
+
+        ObservableList<Client> files= FXCollections.observableArrayList();
+        if(Client.files==null)
+            return files;
+        File folder=new java.io.File(FILEPATH);
+        File[] listOfFiles = folder.listFiles();
+
+        for (int i = 0; i < listOfFiles.length; i++) {
+            if (listOfFiles[i].isFile()) {
+                for (int j = 0; j < Client.files.length; j++) {
+                    if (Client.files[i].fileName.equals(listOfFiles[i].getName())) {
+                        files.add(Client.files[i]);
+                        break;
+                    }
+                }
+            }
+        }
+        return files;
+    }
+
+    public String getFileName() {
+        return fileName;
+    }
+
+    public long getFileSize() {
+        return fileSize;
+    }
+
+    public static void addToFiles(Client c){
+        boolean flag=true;
+        if (files==null) {
+            ArrayList<Client> temp = new ArrayList<>();
+            temp.add(c);
+            files = temp.toArray(new Client[1]);
+        }
+        else{
+        for(int i=0;i<files.length;i++){
+            if(files[i].equals(c)){
+                flag=false;
+                break;
+            }
+        }
+        if(flag) {
+            ArrayList<Client> temp = new ArrayList<>(Arrays.asList(files));
+            temp.add(c);
+            files = temp.toArray(new Client[files.length + 1]);
+        }
+        }
     }
     public void updatePeers()throws Exception{
         Gson gson=new Gson();
-        CloseableHttpAsyncClient client = HttpAsyncClients.createDefault();
+        CloseableHttpAsyncClient client = Proxy.clientBuild();
         client.start();
         HttpGet request = new HttpGet("https://apnanet-central.herokuapp.com/files/"+rootHash);
         Future<HttpResponse> future = client.execute(request, null);
@@ -119,10 +195,12 @@ public class Client{
         ActivePeer[] peers = gson.fromJson(json,ActivePeer[].class);
         activepeers.clear();
         for(ActivePeer i:peers){
-            TreeMap<String,String> map=new TreeMap<>();
-            map.put("ipAddress",i.getIpAddress().substring(i.getIpAddress().lastIndexOf("ffff:")));
-            map.put("port",Integer.toString(i.getPort()));
-            activepeers.add(map);
+            if(!i.getNodeID().equals(Peer.loggedIn.getNodeID())) {
+                TreeMap<String, String> map = new TreeMap<>();
+                map.put("ipAddress", i.getIpAddress().substring(i.getIpAddress().lastIndexOf("ffff:")+5));
+                map.put("port", Integer.toString(i.getPort()));
+                activepeers.add(map);
+            }
         }
         if(activepeers.isEmpty())
             System.out.println("No peers active");
@@ -132,6 +210,7 @@ public class Client{
     public TreeMap<String,String> getPeerWithChunk(int chunk){
         TreeMap<String,String> peer=null;
         for(TreeMap<String,String> i:activepeers){
+
             try(Socket sock=new Socket(i.get("ipAddress"),30303)){
 
                 DataOutputStream dos=new DataOutputStream(sock.getOutputStream());
@@ -159,6 +238,8 @@ public class Client{
     }
 
     public void download(){
+        loadSettings();
+        Client.addToFiles(this);
         int chunk=0;
 
         while(true){
@@ -175,8 +256,9 @@ public class Client{
                     TreeMap<String,String> map=getPeerWithChunk(chunk);
                     if(map==null){updatePeers();continue;}
                     Socket sock =new Socket(map.get("ipAddress"),30303);
-                    int chunkSize=chunk!=totalChunks-1?(chunk+1)*256000:fileSize;
+                    int chunkSize=chunk!=totalChunks-1?256000:(int)(fileSize-(totalChunks-1)*256000);
                     Thread peer=new Thread(threadGroup,new ClientHandler(chunk,sock,chunkHashes[chunk],fileName,filePointers,threadsEngaged,chunkSize,this));
+                    peer.setDaemon(true);
                     peer.start();
 
 

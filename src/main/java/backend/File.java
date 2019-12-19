@@ -2,6 +2,7 @@ package backend;
 
 import com.google.gson.Gson;
 import org.apache.http.HttpResponse;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
@@ -23,7 +24,7 @@ public class File {
     private String[] tags,chunkHashes;
     private long size;
 
-    public File(java.io.File file,String name,String category,String[] tags,Peer peer)throws Exception {
+    public File(java.io.File file,String name,String category,String[] tags,CurrentUser peer)throws Exception {
         try(BufferedInputStream in=new BufferedInputStream(new FileInputStream(file))){
             size=file.length();
             ArrayList<String> temp=new ArrayList<>();
@@ -48,6 +49,35 @@ public class File {
         this.tags=tags.clone();
         sharedBy=peer.getNodeID();
     }
+
+    public String getRootHash() {
+        return rootHash;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public String getSharedBy() {
+        return sharedBy;
+    }
+
+    public String[] getTags() {
+        return tags;
+    }
+
+    public String[] getChunkHashes() {
+        return chunkHashes;
+    }
+
+    public long getSize() {
+        return size;
+    }
+
     public Future<HttpResponse> addFile() throws Exception {
 
         Gson gson=new Gson();
@@ -57,7 +87,7 @@ public class File {
                 ContentType.APPLICATION_JSON);
 
 
-        CloseableHttpAsyncClient client = HttpAsyncClients.createDefault();
+        CloseableHttpAsyncClient client = Proxy.clientBuild();
         client.start();
         HttpPost request = new HttpPost("https://apnanet-central.herokuapp.com/files");
         request.setEntity(entity);
@@ -67,6 +97,15 @@ public class File {
         return future;
 //        System.out.println(gson.toJson(this));
 
+    }
+    public static Future<HttpResponse> getFiles() {
+
+        CloseableHttpAsyncClient client = Proxy.clientBuild();
+        client.start();
+        HttpGet request = new HttpGet("https://apnanet-central.herokuapp.com/files");
+
+        Future<HttpResponse> future = client.execute(request, null);
+        return future;
     }
 
 }

@@ -3,12 +3,15 @@ package backend;
 import java.net.*;
 
 
-public class Server{
+public class Server implements Runnable{
     private final static int port = 30303;
+    private boolean running;
+
+    public Server(){running=true;}
 
 
-
-    public static void server(){
+    public void run(){
+        while ((running)){
         ServerSocket ssock = null;
         try{
 
@@ -32,5 +35,9 @@ public class Server{
                 System.out.println("Failed to connect to client..!!");
             }
         }
+    }}
+
+    public void interrupt(){
+        running=false;
     }
 }

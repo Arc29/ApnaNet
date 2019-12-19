@@ -8,6 +8,7 @@ module javafx {
     requires  org.apache.httpcomponents.httpasyncclient;
     requires org.apache.httpcomponents.httpcore.nio;
     requires com.jfoenix;
+    requires org.apache.commons.text;
     opens ui;
     opens backend;
 }
